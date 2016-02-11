@@ -17,5 +17,5 @@ func runLoop() uint64 {
 }
 
 func main() {
-	fmt.Println(runLoop())
+	fmt.Println("counter:", runLoop())
 }

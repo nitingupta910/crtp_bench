@@ -26,5 +26,5 @@ func runLoop(f *foo) {
 func main() {
 	var f foo
 	runLoop(&f)
-	fmt.Println(f.counter)
+	fmt.Println("counter:", f.counter)
 }
