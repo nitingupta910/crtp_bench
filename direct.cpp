@@ -1,5 +1,7 @@
 #include "common.h"
 
+#include <iostream>
+
 class DynamicImplementation {
   uint64_t counter;
 
@@ -27,6 +29,8 @@ void run_direct(DynamicImplementation* obj) {
 }
 
 int main() {
-  run_direct(new DynamicImplementation());
+  auto obj = new DynamicImplementation();
+  run_direct(obj);
+  std::cout << "counter=" << obj->getvalue() << "\n";
   return 0;
 }

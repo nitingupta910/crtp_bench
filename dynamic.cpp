@@ -1,5 +1,7 @@
 #include "common.h"
 
+#include <iostream>
+
 class DynamicInterface {
 public:
   virtual void tick(uint64_t n) = 0;
@@ -32,6 +34,8 @@ void run_dynamic(DynamicInterface* obj) {
 }
 
 int main() {
-  run_dynamic(new DynamicImplementation());
+  auto obj = new DynamicImplementation();
+  run_dynamic(obj);
+  std::cout << "counter=" << obj->getvalue() << "\n";
   return 0;
 }

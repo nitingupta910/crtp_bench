@@ -1,5 +1,7 @@
 #include "common.h"
 
+#include <iostream>
+
 template <typename Implementation>
 class CRTPInterface {
 public:
@@ -42,6 +44,8 @@ void run_crtp(CRTPInterface<Implementation>* obj) {
 }
 
 int main() {
-        run_crtp(new CRTPInterface<CRTPImplementation>());
+        auto obj = new CRTPInterface<CRTPImplementation>();
+        run_crtp(obj);
+        std::cout << "counter=" << obj->getvalue() << "\n";
         return 0;
 }
