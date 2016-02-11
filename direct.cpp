@@ -8,6 +8,7 @@ public:
     : counter(0) {
   }
 
+  // adding virtual here make it as slow as dynamic version
   void tick(uint64_t n) {
     counter += n;
   }
