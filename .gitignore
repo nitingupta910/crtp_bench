@@ -1,6 +1,7 @@
 crtp
 dynamic
 direct
-go_bench/fncall
-go_bench/fncall_indirect
 go_bench/fncall_none
+go_bench/fncall_direct
+go_bench/fncall_on_struct
+go_bench/fncall_on_interface
