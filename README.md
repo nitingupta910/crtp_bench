@@ -46,6 +46,7 @@ sys     0m0.002s
 ### Go benchmarks
 
 ```
+# increment counter directly in a loop (no function calls)
 time ./fncall_none
 
 counter: 10665866680000
@@ -56,7 +57,18 @@ sys     0m0.003s
 ```
 
 ```
-time ./fncall
+# call a function in a loop
+time ./fncall_plain
+counter: 10665866680000
+
+real    0m0.227s
+user    0m0.214s
+sys     0m0.005s
+```
+
+```
+# call a function (defined on a struct) in a loop
+time ./fncall_on_struct
 
 counter: 10665866680000
 
@@ -66,7 +78,8 @@ sys     0m0.004s
 ```
 
 ```
-time ./fncall_indirect
+# call a function (defined on a struct) through an interface in a loop 
+time ./fncall_on_interface
 
 counter: 10665866680000
 
