@@ -14,7 +14,7 @@ Also contains benchmark for direct/indirect functional call overhead in Go in go
 
 ### C++ benchmarks
 ```
-time ./direct`
+time ./direct
 
 counter=10665866680000
 
