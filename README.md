@@ -14,6 +14,7 @@ Also contains benchmark for direct/indirect functional call overhead in Go in go
 
 ### C++ benchmarks
 ```
+# no classes, just plain function call
 time ./direct
 
 counter=10665866680000
@@ -24,6 +25,7 @@ sys     0m0.001s
 ```
 
 ```
+# call function through base class pointer, the CRTP way
 time ./crtp
 
 counter=10665866680000
@@ -34,6 +36,7 @@ sys     0m0.001s
 ```
 
 ```
+# call function through base class pointer, typical dynamic dispatch
 time ./dynamic
 
 counter=10665866680000
